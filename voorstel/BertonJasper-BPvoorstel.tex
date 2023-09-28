@@ -1,0 +1,70 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachproef
+%==============================================================================
+% Gebaseerd op document class `hogent-article'
+% zie <https://github.com/HoGentTIN/latex-hogent-article>
+
+% Voor een voorstel in het Engels: voeg de documentclass-optie [english] toe.
+% Let op: kan enkel na toestemming van de bachelorproefcoördinator!
+\documentclass{hogent-article}
+
+% Invoegen bibliografiebestand
+\addbibresource{voorstel.bib}
+
+% Informatie over de opleiding, het vak en soort opdracht
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelorproef}
+\assignmenttype{Onderzoeksvoorstel}
+% Voor een voorstel in het Engels, haal de volgende 3 regels uit commentaar
+% \studyprogramme{Bachelor of applied information technology}
+% \course{Bachelor thesis}
+% \assignmenttype{Research proposal}
+
+\academicyear{2023-2024} 
+
+
+\title{Hoe kan technologie worden ingezet om verkeersongelukken met wild systematisch in kaart te brengen en te analyseren, met als doel preventieve maatregelen te verbeteren? }
+
+
+\author{Jasper Berton}
+\email{jasper.berton@student.hogent.be}
+
+
+% TODO: Geef de co-promotor op
+\supervisor[Co-promotor]{A. Niem (Bedrijf, \href{mailto:anon.niem@company.be}{email@adres.com})}
+
+% Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
+% Kies uit deze lijst:
+%
+% - Mobile \& Enterprise development
+% - AI \& Data Engineering
+% - Functional \& Business Analysis
+% - System \& Network Administrator
+% - Mainframe Expert
+% - Als het onderzoek niet past binnen een van deze domeinen specifieer je deze
+%   zelf
+%
+\specialisation{Mobile \& Enterprise development}
+\keywords{Scheme, World Wide Web, $\lambda$-calculus}
+
+\begin{document}
+
+\begin{abstract}
+    
+   Dit onderzoek tracht de problematiek aan te pakken rond de vele dierslachtoffers die jaarlijks vallen in het Belgisch verkeer. Uit recente cijfers blijkt dat er in de periode van 2017 tot 2020 30.873 waarnemingen waren van aangereden dieren in het verkeer. Doordat er geen officieël meldpunt of protocol is bestaat er ook nog de kans dat deze cijfers veel hoger liggen in realiteit. Vandaar dat het noodzakelijk is om een mogelijkheid te creëren om deze data via een toegankelijkere manier te verzamelen en ook duidelijk te representeren zodat deze kan gebruikt worden om preventieve maatregelen te nemen. \\
+   
+   Concreet zullen er dus twee proof-of-concepts applicaties uitgewerkt worden die in tandem zullen samenwerken. Aan de ene kant zal dit een meldingspunt zijn, een mobiele applicatie, waar zowel burgers als medewerkers van politiediensten melding kunnen maken van een ongeval waarbij een dier is betrokken. Aan de andere kant is er dan een website met een interactieve kaart waarop ongevallen over een bepaalde periode weergegeven worden. Dit kan dan op zijn beurt gebruikt worden voor analyse van pijnpunten van bepaalde locaties. \\
+   
+   Wat verwacht word uit dit onderzoek voort te vloeien is een toegankelijkere manier van data verzamelen. Dit kan dan verder evolueren in een betere bron van kennis waar door instanties gerichtere keuzes kunnen gemaakt worden.
+ 
+\end{abstract}
+
+\tableofcontents
+
+% De hoofdtekst van het voorstel zit in een apart bestand, zodat het makkelijk
+% kan opgenomen worden in de bijlagen van de bachelorproef zelf.
+\input{voorstel-inhoud}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}

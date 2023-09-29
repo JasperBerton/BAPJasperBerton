@@ -30,35 +30,58 @@ Een van de eerste en meest succesvolle projecten waarbij gamificatie werd toegep
 
 Daarna duurde het een hele periode alvorens er een evolutie kwam in dit gebied. Gamificatie zoals we het vandaag de dag kennen werd geboren in het jaar 2003. Nick Pelling kwam namelijk af met het idee om speelvolle elementen toe te voegen aan bepaalde producten. Zijn idee was sterk en de term was geboren maar zijn bedrijf ging uiteindelijk ten onder. \autocite{Khaitova2021} \\
 
-De volgende evolutie kwam er in 2010 toen Jane McGonigal opperde dat gamers de wereld konden veranderen als ze maar de juiste richting in gedirigeerd werden. Door de positieve ontvangst van het publiek leidde deze uitspraak tot de eerste Gamification Summit een jaar later. \autocite{Christians2018}
+De volgende evolutie kwam er in 2010 toen Jane McGonigal opperde dat gamers de wereld konden veranderen als ze maar de juiste richting in gedirigeerd werden. Door de positieve ontvangst van het publiek leidde deze uitspraak tot de eerste Gamification Summit een jaar later. \autocite{Christians2018} \\
 
 Hierna veranderde er niet veel meer aan het medium maar kwamen er wel nog veel andere spelers op de markt en geraakte de term wijdverspreid.
 
+\subsection{Strava API}
 
+Een hoeksteen waar de applicatie zwaar op zal steunen is de API aangeleverd door de sport app Strava. Strava zelf is een applicatie gebruikt door sportievelingen om informatie van hun sportprestaties bij te houden. \\
 
+De API aangeboden door dit bedrijf is gratis maar als ontwikkelaar heb je wel een account nodig. Data kan niet opgehaald worden in grote getallen van eender wie zijn account maar elke gebruiker moet zich aanmelden met zijn of haar eigen account via 0Auth 2.0. Er zijn ook enkele limitaties aan de API namelijk request limits van 200 per 15 minuten en een maximum van 2000 requests per dag. \autocite{Strava2023}
 
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+\subsection{Deelnemers}
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+De deelnemers van deze studie zullen bestaan uit verschillende jongeren tussen 16-21 jaar als testers voor de applicatie. Dit omdat zij de uiteindelijke eindgebruikers zullen zijn van de applicatie moest deze in circulatie gezet worden.
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+\subsection{Ontwerp en procedure}
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+Voor dit onderzoek is het de bedoeling om uiteindelijk tot een proof-of-concept te geraken dat kan afgeleverd worden. Hiervoor werden de volgende stappen onderverdeeld in bepaalde fasen:
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+\begin{enumerate}
+    \item \hyperref[subsub:beschrijving]{Beschrijving casus}
+    \item \hyperref[subsub:uitwerking]{Uitwerken POC}
+    \item \hyperref[subsub:testfase]{Testen van de applicatie}
+    \item \hyperref[subsub:conclusies]{Conclusies}
+\end{enumerate}
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+\subsection{Beschrijving casus}
+\label{subsub:beschrijving}
+
+Gedurende deze eerste fase is het belangrijk om informatie te verzamelen omtrent hoe het gamificatie aspect verwerkt zal worden in de applicatie. Ook een achtergrondstudie naar het grondprobleem dat zal worden aangepakt en wat de beste manieren zijn om dit probleem aan te pakken vormen een groot aspect van deze fase. \\
+
+\subsection{Uitwerken Proof-of-Concept}
+\label{subsub:uitwerking}
+
+Deze tweede fase zal ook degene worden waar de meeste tijd in zal kruipen. Dit deel bestaat er namelijk uit om de volledige POC uit te werken. Deze applicatie zal als front-end functioneel uitgebouwd worden met React en als back-end zal het rechtstreeks steunen op de Strava API. 
+
+\subsection{Testen van de applicatie}
+\label{subsub:testfase}
+
+Gedurende deze fase zal de applicatie aan automatische testen onderworpen worden in verband met beveiliging en veiligheid. Daarna kan de applicatie open gesteld worden voor een selecte groep product testers die de kans krijgen het product uit te testen en daarna via een formulier de kans krijgen om hun mening en ervaringen op een gestructureerde manier door te geven zodat deze dan kunnen verwerkt worden. 
+
+\subsection{Conclusies}
+\label{subsub:conclusies}
+
+Als laatste fase is het belangrijk om te reflecteren op het gehele proces en de data te verwerken die verzameld is doorheen de fase ervoor. Hieruit kan dan een conclusie opgemaakt worden. Dit kan dan dienen als advies voor anderen naar de toekomst toe. 
+
+
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
-
+Uit de verwachte resultaten kan opgemaakt worden of een gamificatie van sportprestaties een nuttige manier is om verder te gaan om zo meer mensen te motiveren om regelmatiger te sporten. Verwacht is dat door de stimulatie aan hand van medailles en levels dat meer mensen gemotiveerder zullen zijn door een gevoel te hebben dat ze ergens naartoe werken dat reeël en duidelijk afgebakend is.

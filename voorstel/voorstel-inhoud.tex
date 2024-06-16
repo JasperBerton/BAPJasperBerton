@@ -13,26 +13,24 @@ De groep waarop zal gefocust worden gedurende deze studie is private bedrijven d
 
 \subsection{Probleemstelling en onderzoeksvraag}
 
-
+Een kenmerk van private netwerken is dat ze afgestemd zijn op de industrie waarin ze toegepast zullen worden. \autocite{Alen2020} Een nadeel aan deze gepersonaliseerde manier van aanpak is dat een gestandaardiseerde test voor commerciële netwerken niet gebruikt kan worden voor deze netwerken. De huidige status van deze test opstelling bestond hierdoor uit een grote partitie aan handmatig werk en verscheidene omwegen om de verwonnen data te gebruiken.
 
 \subsection{De onderzoeksdoelstelling}
 
-Het uiteindelijke doel van deze studie is om een proof-of-concept af te leveren. Deze PoC zou een Android applicatie zijn die gebruik maakt van de sport app Strava als een backend/API. Dit zou dan uitgebracht kunnen worden naar het bredere publiek om dan zo meer mensen te motiveren om meer te sporten. Naast de proof-of-concept zal er ook een literatuurstudie en een volledige documentatie zijn van het proces.
+Het uiteindelijke doel van deze studie is om een proof-of-concept af te leveren. Deze PoC zou een Android applicatie zijn die kan ingezet worden gedurende tijdelijke opstellingen van private netwerken op evenementen. Dit met als doel om de uit te voeren routine te automatiseren en standaardiseren zodat er meer en grondiger data kan verzameld worden. Deze verwonnen info zou men dan kunnen inzetten om het netwerk beter te diagnosen en rapporten voor klanten uit op te maken.
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{Literatuurstudie}%
 \label{sec:state-of-the-art}
 
-\subsection{Geschiedenis gamificatie}
+\subsection{LTE netwerk architectuur}
 
-Een van de eerste en meest succesvolle projecten waarbij gamificatie werd toegepast was door het bedrijf Sperry en Hutchinson Co. opgericht in 1896 te Alabama. Hun idee om mensen te motiveren met spel elementen hebben ze geïmplementeerd door het invoeren van stempels waarmee klanten dan producten konden kopen. \autocite{Christians2018}. \\
+Een Long Term Evolution Netwerk oftewel LTE, is een technologie die is opgebouwd uit verschillende componenten. Deze zijn stuk voor stuk eigen aan deze iteratie van cellulaire systemen. Verder in dit hoofdstuk zal besproken worden hoe de verschillende elementen zorgen dat de End User (UE) zich kan verbinden met de rest van de wereld.\\
 
-Daarna duurde het een hele periode alvorens er een evolutie kwam in dit gebied. Gamificatie zoals we het vandaag de dag kennen werd geboren in het jaar 2003. Nick Pelling kwam namelijk af met het idee om speelvolle elementen toe te voegen aan bepaalde producten. Zijn idee was sterk en de term was geboren maar zijn bedrijf ging uiteindelijk ten onder. \autocite{Khaitova2021} \\
+Een van de belangrijkste onderdelen van deze opstelling is de core. Verantwoordelijk voor het beslissen over wat er gebeurt met een UE zijn er verschillende logische onderdelen. Dit systeem bestaat er vooral uit om abonnees te registreren en daarna hun data stromen elk een niveau van Quality Of Service toe te kennen. Deze vooraf gedefinieerde QoS niveaus zorgen ervoor dat de nodige middelen correct worden toegekend. Zo zijn de pakketten en de stroom van data volledig anders wanneer een eindgebruiker een video live bekijkt ten opzichte van een telefoongesprek dat via Voice over IP gaat. \autocite{Palat2011} \\
 
-De volgende evolutie kwam er in 2010 toen Jane McGonigal opperde dat gamers de wereld konden veranderen als ze maar de juiste richting in gedirigeerd werden. Door de positieve ontvangst van het publiek leidde deze uitspraak tot de eerste Gamification Summit een jaar later. \autocite{Christians2018} \\
-
-Het begrip zelf evolueerde na deze veranderingen niet meer maar werd wel steeds vaker geïmplementeerd. 
+Het ander hoofdcomponent in een LTE-netwerk is het Radio Access Network (RAN). Dit onderdeel van het netwerk verzorgt de connectie tussen de core, en de EU. Bij LTE bestaat dit deel uit een eNodeBs. In bepaalde opstellingen kunnen er meerdere van deze torens verbonden zijn met één core. Wat verschillend is tussen deze elementen en degene van de voorgaande generatie is dat er geen gecentraliseerde controle unit is. Lage latency en verhoogde efficiëntie zijn hier een gevolg van, maar dit zorgt er wel voor dat alle data van de EU moet verplaatsen van eNodeB naar een andere wanneer deze zich verplaatst. \autocite{Palat2011} \\
 
 \subsection{Gamificatie en sport}
 
@@ -51,7 +49,7 @@ De API aangeboden door dit bedrijf is gratis maar als ontwikkelaar heb je wel ee
 
 \subsection{Deelnemers}
 
-De deelnemers van deze studie zullen bestaan uit verschillende jongeren tussen 16-21 jaar als testers voor de applicatie. Dit omdat zij de uiteindelijke eindgebruikers zullen zijn van de applicatie moest deze in circulatie gezet worden.
+De deelnemers van deze studie zullen bestaan uit verschillende medewerkers van het Research en Flex team binnen Citynesh die zullen ingezet worden om de applicatie grondig te testen en data te verzamelen.
 
 \subsection{Ontwerp en procedure}
 
@@ -90,4 +88,4 @@ Als laatste fase is het belangrijk om te reflecteren op het gehele proces en de 
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Uit de verwachte resultaten kan opgemaakt worden of een gamificatie van sportprestaties een nuttige manier is om verder te gaan om zo meer mensen te motiveren om regelmatiger te sporten. Verwacht is dat door de stimulatie aan hand van medailles en levels dat meer mensen gemotiveerder zullen zijn door een gevoel te hebben dat ze ergens naartoe werken dat reeël en duidelijk afgebakend is.
+Uit de verwachte resultaten kan opgemaakt worden of er een bruikbare mogelijkheid is om een applicatie te ontwikkelen om private netwerken grondig en bruikbaar te kunnen testen. Verwacht word dat er wel degelijk een applicatie kan ontwikkeld worden maar dat er beperkingen zullen zijn naarmate de diepgang en personalisatie in de applicatie en het automatiseren van de routine. Ook is er een kans dat door de resultaten in real-time te versturen naar een online databank, dit een invloed heeft op de gemeten resultaten.

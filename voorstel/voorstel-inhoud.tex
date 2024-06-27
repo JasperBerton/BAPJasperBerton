@@ -9,7 +9,7 @@
 
 \subsection{De doelgroep}
 
-De groep waarop zal gefocust worden gedurende deze studie is private bedrijven die zich inzetten op het ontwikkelen van private netwerken voor andere bedrijven, met name Citymesh. Dit bedrijf is al actief sinds 2016 en specialiseert zich in het uitbouwen van netwerken voor andere bedrijven. \autocite{Cassauwers2019}
+De groep waarop zal gefocust worden gedurende deze studie is private bedrijven die zich inzetten op het ontwikkelen van connectiviteit voor andere bedrijven, met name Citymesh. Dit bedrijf is al actief sinds 2016 en specialiseert zich in het uitbouwen van netwerken voor andere bedrijven. \autocite{Cassauwers2019}
 
 \subsection{Probleemstelling en onderzoeksvraag}
 
@@ -32,17 +32,13 @@ Een van de belangrijkste onderdelen van deze opstelling is de core. Verantwoorde
 
 Het ander hoofdcomponent in een LTE-netwerk is het Radio Access Network (RAN). Dit onderdeel van het netwerk verzorgt de connectie tussen de core, en de EU. Bij LTE bestaat dit deel uit een eNodeBs. In bepaalde opstellingen kunnen er meerdere van deze torens verbonden zijn met één core. Wat verschillend is tussen deze elementen en degene van de voorgaande generatie is dat er geen gecentraliseerde controle unit is. Lage latency en verhoogde efficiëntie zijn hier een gevolg van, maar dit zorgt er wel voor dat alle data van de EU moet verplaatsen van eNodeB naar een andere wanneer deze zich verplaatst. \autocite{Palat2011} \\
 
-\subsection{Gamificatie en sport}
+\subsection{Publiek versus privaat}
 
-Gamificatie is al reeds aanwezig in verschillende sport applicaties. Bij meesten, zoals bijvoorbeeld bij Strava, is er het gebruik van verschillende vriendelijke competities waar een top 3 of top 10 word gevisualiseerd. De keuze voor deze manier van aanpak kan wel negatieve gevolgen hebben omdat het er voor kan zorgen dat mensen gedemotiveerd raken doordat ze buiten die top 10 of zelfs top 20 vallen. \autocite{Alen2020} Het is dus belangrijk om oftewel te zorgen dat de speler ten alle tijden zich betrokken voelt tot het spel element ofdat er een gezamenlijk doel is om naar samen te werken.
+TODO.
 
-\subsection{Strava API}
+\subsection{Telecommunnicatie spectrum}
 
-De reden waarom gekozen is voor Strava is vanwege het feit dat Strava niet platform gebonden is doordat het een applicatie is die niet gebonden is aan externe bepaalde particuliere hardware. \autocite{David2023} Hierdoor is er geen drempel voor nieuwe sporters of uitsluiting op basis van materiaal dat de iemand al dan niet bezit. 
-
-Een hoeksteen waar de applicatie zwaar op zal steunen is de API aangeleverd door de sport app Strava. Strava zelf is een applicatie gebruikt door sportievelingen om informatie van hun sportprestaties bij te houden. \\
-
-De API aangeboden door dit bedrijf is gratis maar als ontwikkelaar heb je wel een account nodig. Data kan niet opgehaald worden in grote getallen van eender wie zijn account maar elke gebruiker moet zich aanmelden met zijn of haar eigen account via 0Auth 2.0. Er zijn ook enkele limitaties aan de API namelijk request limits van 200 per 15 minuten en een maximum van 2000 requests per dag. \autocite{Strava2023}
+TODO 
 
 \section{Methodologie}%
 \label{sec:methodologie}
@@ -65,22 +61,22 @@ Voor dit onderzoek is het de bedoeling om uiteindelijk tot een proof-of-concept 
 \subsection{Beschrijving casus}
 \label{subsub:beschrijving}
 
-Gedurende deze eerste fase is het belangrijk om informatie te verzamelen omtrent hoe het gamificatie aspect verwerkt zal worden in de applicatie. Ook een achtergrondstudie naar het grondprobleem dat zal worden aangepakt en wat de beste manieren zijn om dit probleem aan te pakken vormen een groot aspect van deze fase. \\
+Gedurende deze eerste fase is het belangrijk om informatie te verzamelen omtrent hoe een privaat netwerk functioneert om zo routines uit te schrijven zodat het kan verwerkt worden in de applicatie. Ook een achtergrondstudie naar de huidige state of the art en de industrie dat zal worden aangepakt en wat de beste manieren zijn om dit probleem aan te pakken vormen een groot aspect van deze fase. \\
 
 \subsection{Uitwerken Proof-of-Concept}
 \label{subsub:uitwerking}
 
-Deze tweede fase zal ook degene worden waar de meeste tijd in zal kruipen. Dit deel bestaat er namelijk uit om de volledige POC uit te werken. Deze applicatie zal als front-end functioneel uitgebouwd worden met React en als back-end zal het rechtstreeks steunen op de Strava API. 
+Deze fase loopt gelijkdurig met de andere fases doordat het een langdurig proces is. Dit bestaat er namelijk uit om de een Proof-Of-Concept uit te werken. Deze applicatie word intern uitgebouwd binnen het Research team als een Android applicatie steunend op een open-source tijdreeksdatabase genaamd Influx waarvoor deze data dan kan gebruikt worden in een Grafana dashboard.
 
 \subsection{Testen van de applicatie}
 \label{subsub:testfase}
 
-Gedurende deze fase zal de applicatie aan automatische testen onderworpen worden in verband met beveiliging en veiligheid. Daarna kan de applicatie open gesteld worden voor een selecte groep product testers die de kans krijgen het product uit te testen en daarna via een formulier de kans krijgen om hun mening en ervaringen op een gestructureerde manier door te geven zodat deze dan kunnen verwerkt worden. De data die hier centraal staat is de gebruikstijden van de applicatie over verloop van tijd als ook het aantal afgelegde kilometers per test persoon over het verloop van tijd. Dit zal dan uiteindelijk aangevuld worden met een persoonlijke enquete waar de ervaringen van de testers in zal opgenomen worden. 
+Doorheen verscheidene sprint iteraties van de applicatie zal het onderworpen worden aan testen op zowel verscheidene publieke als private netwerken. Dit zorgt er eenderhand voor dat er uitgebreider kan getest worden op de stabiliteit en het functioneren van de verscheidene netwerken. Een bijproduct van deze fase is dat er data verworven wordt waarbij de verscheidene aangeboden diensten kunnen vergeleken worden voor een gegeven locatie. De code integriteit zal ook onderworpen worden aan verscheidene testen door het implementeren van een cicd pipeline.
 
 \subsection{Conclusies}
 \label{subsub:conclusies}
 
-Als laatste fase is het belangrijk om te reflecteren op het gehele proces en de data te verwerken die verzameld is doorheen de fase ervoor. Hieruit kan dan een conclusie opgemaakt worden. Dit kan dan dienen als advies voor anderen naar de toekomst toe. 
+Als laatste fase is het belangrijk om te reflecteren op het gehele proces en de data te verwerken die verzameld is doorheen de fase ervoor. Hieruit kan dan een presentatie opgemaakt worden omtrent de mogelijke voordelen die de proof-of-concept brengt op het testen van een netwerk. Belangrijk is ook om alle betrokken partijen te betrekken bij het beoordelen van de applicatie die door hen is gebruikt. 
 
 
 
@@ -88,4 +84,4 @@ Als laatste fase is het belangrijk om te reflecteren op het gehele proces en de 
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Uit de verwachte resultaten kan opgemaakt worden of er een bruikbare mogelijkheid is om een applicatie te ontwikkelen om private netwerken grondig en bruikbaar te kunnen testen. Verwacht word dat er wel degelijk een applicatie kan ontwikkeld worden maar dat er beperkingen zullen zijn naarmate de diepgang en personalisatie in de applicatie en het automatiseren van de routine. Ook is er een kans dat door de resultaten in real-time te versturen naar een online databank, dit een invloed heeft op de gemeten resultaten.
+Uit de verwachte resultaten kan opgemaakt worden of er een bruikbare mogelijkheid is om een applicatie te ontwikkelen om private netwerken grondig en bruikbaar te kunnen testen. Verwacht word dat er wel degelijk een applicatie kan ontwikkeld worden maar dat er beperkingen zullen zijn naarmate de diepgang en personalisatie in de applicatie en het automatiseren van de routine. Ook is er een kans dat door de resultaten in real-time te versturen naar een online databank, dit een invloed heeft op de gemeten resultaten. Een van de belangrijkste taken die de proof-of-concept zou moeten volbrengen is het reduceren van de nodige tijd om een netwerk te testen met bruikbare resultaten. 

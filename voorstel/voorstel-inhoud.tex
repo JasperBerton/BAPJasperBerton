@@ -25,23 +25,20 @@ Het uiteindelijke doel van deze studie is om een proof-of-concept af te leveren.
 \label{sec:state-of-the-art}
 
 \subsection{LTE netwerk architectuur}
-
-Een Long Term Evolution Netwerk oftewel LTE, is een technologie die is opgebouwd uit verschillende componenten. Deze zijn stuk voor stuk eigen aan deze iteratie van cellulaire systemen. Verder in dit hoofdstuk zal besproken worden hoe de verschillende elementen zorgen dat de End User (UE) zich kan verbinden met de rest van de wereld.\\
-
-Een van de belangrijkste onderdelen van deze opstelling is de core. Verantwoordelijk voor het beslissen over wat er gebeurt met een UE zijn er verschillende logische onderdelen. Dit systeem bestaat er vooral uit om abonnees te registreren en daarna hun data stromen elk een niveau van Quality Of Service toe te kennen. Deze vooraf gedefinieerde QoS niveaus zorgen ervoor dat de nodige middelen correct worden toegekend. Zo zijn de pakketten en de stroom van data volledig anders wanneer een eindgebruiker een video live bekijkt ten opzichte van een telefoongesprek dat via Voice over IP gaat. \autocite{Palat2011} \\
-
-Het ander hoofdcomponent in een LTE-netwerk is het Radio Access Network (RAN). Dit onderdeel van het netwerk verzorgt de connectie tussen de core, en de EU. Bij LTE bestaat dit deel uit een eNodeBs. In bepaalde opstellingen kunnen er meerdere van deze torens verbonden zijn met één core. Wat verschillend is tussen deze elementen en degene van de voorgaande generatie is dat er geen gecentraliseerde controle unit is. Lage latency en verhoogde efficiëntie zijn hier een gevolg van, maar dit zorgt er wel voor dat alle data van de EU moet verplaatsen van eNodeB naar een andere wanneer deze zich verplaatst. \autocite{Palat2011} \\
-
+Een Long Term Evolution Netwerk oftewel LTE, is een technologie die is opgebouwd uit verschillende componenten. Deze zijn stuk voor stuk eigen aan deze iteratie van cellulaire systemen. Verder in dit hoofdstuk zal besproken worden hoe de verschillende elementen zorgen dat de End User (UE) zich kan verbinden met de rest van de wereld.
+\\
+Een van de belangrijkste onderdelen van deze opstelling is de core. Verantwoordelijk voor het beslissen over wat er gebeurt met een UE zijn er verschillende logische onderdelen. Dit systeem bestaat er vooral uit om abonnees te registreren en daarna hun data stromen elk een niveau van Quality Of Service toe te kennen. Deze vooraf gedefinieerde QoS niveaus zorgen ervoor dat de nodige middelen correct worden toegekend. Zo zijn de pakketten en de stroom van data volledig anders wanneer een eindgebruiker een video live bekijkt ten opzichte van een telefoongesprek dat via Voice over IP gaat. \autocite{Palat2011} 
+\\
+Het ander hoofdcomponent in een LTE-netwerk is het Radio Access Network (RAN). Dit onderdeel van het netwerk verzorgt de connectie tussen de core, en de EU. Bij LTE bestaat dit deel uit een eNodeBs. In bepaalde opstellingen kunnen er meerdere van deze torens verbonden zijn met één core. Wat verschillend is tussen deze elementen en degene van de voorgaande generatie is dat er geen gecentraliseerde controle unit is. Lage latency en verhoogde efficiëntie zijn hier een gevolg van, maar dit zorgt er wel voor dat alle data van de EU moet verplaatsen van eNodeB naar een andere wanneer deze zich verplaatst. \autocite{Palat2011} 
+\\
 \subsection{Mobiel privaat netwerk vs Wifi}
-
-Het grootste verschil dat opgemerkt kan worden tussen een cellulair privaat netwerk en Wifi is de coverage. Beide gebruiken radio frequenties maar Wifi is ontworpen om kleine coverage gebieden aan te bieden terwijl een access point voor een mobiel netwerk kan ingezet worden voor een veel groter gebied.\autocite{2024Digi} \\
-
+Het grootste verschil dat opgemerkt kan worden tussen een cellulair privaat netwerk en Wifi is de coverage. Beide gebruiken radio frequenties maar Wifi is ontworpen om kleine coverage gebieden aan te bieden terwijl een access point voor een mobiel netwerk kan ingezet worden voor een veel groter gebied.\autocite{2024Digi} 
+\\
 Omtrent het registreren van een gebruiker binnen een netwerk is er ook een significant verschil tussen beide connectiviteits opties. Zo heeft men een SIM-kaart nodig om zich te kunnen registreren op een mobiel privaat netwerk in tegenstelling tot een wachtwoord of dergelijke dat instaat als toegangscontrole op een Wifi netwerk.\autocite{David2024}
 
 \subsection{Telecom spectrum licensing}
-
-Om het opzetten van private netwerken mogelijk te maken kunnen mobiele netwerk operatoren, oftewel MNO's, een licensie aankopen zodat ze een bepaald deel van het elektromagnetisch spectrum kunnen gebruiken voor eigen gebruik. Het is belangrijk dat dit sterk gerugeleerd is om er zo zeker van te zijn dat er geen interferentie is tussen verscheidene uitgezonden signalen binnen een bepaald geografisch gebied.\autocite{Trick2022} \\
-
+Om het opzetten van private netwerken mogelijk te maken kunnen mobiele netwerk operatoren, oftewel MNO's, een licensie aankopen zodat ze een bepaald deel van het elektromagnetisch spectrum kunnen gebruiken voor eigen gebruik. Het is belangrijk dat dit sterk gerugeleerd is om er zo zeker van te zijn dat er geen interferentie is tussen verscheidene uitgezonden signalen binnen een bepaald geografisch gebied.\autocite{Trick2022}
+\\
 Unlicensed oftewel gedeeld spectrum daarentegen kan gebruikt worden door alle operatoren maar hierdoor komt het wel voor dat gebruikers een slechtere ervaring hebben doordat het spectrum gedeeld moet worden onder alle gebruikers ten opzichte van een gelimiteerd aantal dat toegelaten word binnen een gelicensieërd spectrum.\autocite{Trick2022}
 
 
@@ -66,8 +63,8 @@ Voor dit onderzoek is het de bedoeling om uiteindelijk tot een proof-of-concept 
 \subsection{Beschrijving casus}
 \label{subsub:beschrijving}
 
-Gedurende deze eerste fase is het belangrijk om informatie te verzamelen omtrent hoe een privaat netwerk functioneert om zo routines uit te schrijven zodat het kan verwerkt worden in de applicatie. Ook een achtergrondstudie naar de huidige state of the art en de industrie dat zal worden aangepakt en wat de beste manieren zijn om dit probleem aan te pakken vormen een groot aspect van deze fase. \\
-
+Gedurende deze eerste fase is het belangrijk om informatie te verzamelen omtrent hoe een privaat netwerk functioneert om zo routines uit te schrijven zodat het kan verwerkt worden in de applicatie. Ook een achtergrondstudie naar de huidige state of the art en de industrie dat zal worden aangepakt en wat de beste manieren zijn om dit probleem aan te pakken vormen een groot aspect van deze fase.
+\\
 \subsection{Uitwerken Proof-of-Concept}
 \label{subsub:uitwerking}
 

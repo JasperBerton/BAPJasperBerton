@@ -56,6 +56,16 @@ Een waarde die vaak voorkomt wanneer men de kwaliteit en sterkte van een netwerk
 
 Een andere waarde die kan opgemeten wanneer men verbonden is met een bepaalde cel is de RSRP of Reference Signal Received Power. Dit definieêrt namelijk hoe goed en standvast de verbinding tussen een eindgebruiker en de huidige mast is. De schaal die deze parameter gebruikt is gelijkaardig aan die van RSSI, namelijk dat het negatieve waarden zijn en lager wijst op een slechtere verbinding maar de schaal loopt van -50 tot -130 dBm. De factor die voor een grote impact hierop zorgt is de afstand tot aan de effectieve mast en of de eindgebruiker een duidelijke zichtlijn zonder obstakels heeft met hiervoor vermelde toren. \autocite{Ramirez2023} \\
 
+Gebruik makende van de vorige twee waarden kan men een andere waarde berekenen die meer inzicht geeft in hoe efficiënt het netwerk data oplevert en of er een betrouwbare connectie is. \autocite{Apostu2024} Deze waarde word ook wel RSRQ oftewel Reference Signal Received Quality genoemd en kan berekend worden met een van de volgende formules:
+
+$ RSRP (Watt) = N * RSRP / RSSQ $ \\
+$ RSRP (dBm) = 10 log (N) + RSRP - RSSI $
+
+In beide van deze is er een nood voor een waarde N waarmee hier gerefereerd wordt naar het nummer van resource blocks aanwezig in de gemeten bandbreedte van de cel waarmee men verbonden is. \autocite{Kovadloff2021} Deze componenten zijn groeperingen van 12 sub carriers wat uiteindelijk uitkomt op een blok van 180 kHz. \autocite{Mishra2018} \\
+
+Wanneer men wil bepalen in welke capaciteit een bepaald bericht kan getransporteerd worden over een netwerk is het belangrijk om de ruis aanwezig ook in te calculeren. Een maat staaf die daarvoor kan ingezet worden Signal to Noise Ratio (SNR). Dit geeft een ratio weer van de signaal sterkte ten opzichte van de ruis aanwezig. Deze waarde word zoals de voorgaande weergegeven in dBm. Afgaande van hoe het ratio is opgesteld is ook duidelijk dat hoe dichter deze waarde nadert bij de nul, hoe slechter het netwerk er aan toe is en er een lagere kans is dat een bepaald object ook effectief kan verstuurd worden. \autocite{Sheldon2021}
+
+
 
 
 % Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.

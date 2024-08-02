@@ -54,12 +54,15 @@ Gebruik makende van de vorige twee waarden kan men een andere waarde berekenen d
 $ RSRP (Watt) = N * RSRP / RSSQ $ \\
 $ RSRP (dBm) = 10 log (N) + RSRP - RSSI $
 
-In beide van deze is er een nood voor een waarde N waarmee hier gerefereerd wordt naar het nummer van resource blocks aanwezig in de gemeten bandbreedte van de cel waarmee men verbonden is. \autocite{Kovadloff2021} Deze componenten zijn groeperingen van 12 sub carriers wat uiteindelijk uitkomt op een blok van 180 kHz. \autocite{Mishra2018} \\
+In beide van deze is er een nood voor een waarde N waarmee hier gerefereerd wordt naar het nummer van resource blocks aanwezig in de gemeten bandbreedte van de cel waarmee men verbonden is. \autocite{Kovadloff2021} Deze componenten zijn groeperingen van 12 sub carriers wat uiteindelijk uitkomt op een blok van 180 kHz. \autocite{Mishra2018} Op onderstaande figuur kan men zien hoe het aantal beschikbare blokken zich verhoudt tot de verschillende bandbreedtes die momenteel aanwezig zijn op de markt. 
 
-Wanneer men wil bepalen in welke capaciteit een bepaald bericht kan getransporteerd worden over een netwerk is het belangrijk om de ruis aanwezig ook in te calculeren. Een maat staaf die daarvoor kan ingezet worden Signal to Noise Ratio (SNR). Dit geeft een ratio weer van de signaal sterkte ten opzichte van de ruis aanwezig. Deze waarde word zoals de voorgaande weergegeven in dBm. Afgaande van hoe het ratio is opgesteld is ook duidelijk dat hoe dichter deze waarde nadert bij de nul, hoe slechter het netwerk er aan toe is en er een lagere kans is dat een bepaald object ook effectief kan verstuurd worden. \autocite{Sheldon2021}
+\begin{figure*}[ht]
+    \includegraphics[width=1\linewidth]{graphics/bandwithandRB}
+    \caption[Relatie tussen bandbreedte en resource blocks]{Relatie tussen bandbreedte en resource blocks \autocite{Kovadloff2021}}
+    \label{fig:bandwithandrb}
+\end{figure*}
 
-
-
+Wanneer men wil bepalen in welke capaciteit een bepaald bericht kan getransporteerd worden over een netwerk is het belangrijk om de ruis aanwezig ook in te calculeren. Een maat staaf die daarvoor kan ingezet worden is Signal to Noise Ratio (SNR). Dit geeft een ratio weer van de signaal sterkte ten opzichte van de ruis aanwezig. Deze waarde word zoals de voorgaande weergegeven in dBm. Afgaande van hoe het ratio is opgesteld is ook duidelijk dat hoe dichter deze waarde nadert bij de nul, hoe slechter het netwerk er aan toe is en er een lagere kans is dat een bepaald object ook effectief kan verstuurd worden.  \autocite{Sheldon2021}
 
 % Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 

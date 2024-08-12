@@ -41,12 +41,12 @@ Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk o
 \begin{itemize}
     \item \textbf{Must have}
     \begin{itemize}
-        \item Locatie bepalen van eindgebruiker.
+        \item Locatie bepalen van een eindgebruiker.
         \item Download \& Upload limiet van netwerk meten.
         \item Latentie tussen UE en bepaald IP adres vastleggen.
         \item Informatie bijhouden in een database voor verder onderzoek.
-        \item Visualisatie van desbetreffende data op een admin portaal.
-        \item Indicatie naar eindgebruiker wat er gebeurt gedurende de test routine.
+        \item Visualisatie van desbetreffende data op een administratief portaal.
+        \item Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt.
     \end{itemize}
     \item \textbf{Should have}
     \begin{itemize}
@@ -64,8 +64,99 @@ Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk o
     \end{itemize}
     \item \textbf{Won't have}
     \begin{itemize}
-        \item Data synchronisatie tussen online database en UE.
         \item Autorisatie van gebruiker die instrument bedient.
     \end{itemize}
 \end{itemize}
 
+\section{Beoordelingsschaal}
+
+Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voorwaarden die hierboven gesteld staan, ontwikkeld er zich de nood voor een bepaalde schaal om deze een score toe te kunnen kennen. Om deze problematiek op te lossen zal gebruik gemaakt worden van een puntenschaal gaande van 1 tot 5. In het vervolg van dit hoofdstuk volgt een toelichting voor wat elke score betekend voor een specifieke requirement.
+
+\subsection{Locatie bepalen van een eindgebruiker}
+
+\begin{itemize}
+    \item Score 1: De applicatie geeft geen mogelijkheid om de locatie van de gebruiker te achterhalen.
+    \item Score 2: De applicatie heeft een mogelijkheid om de locatie te bepalen maar is zeer onnauwkeurig, maximaal tot op een tiental meter van de effectieve locatie.
+    \item Score 3: Locatiebepaling is nauwkeurig tot op een meter, maar enkel buiten.
+    \item Score 4: De tool kan de gebruiker zijn locatie tot op een meter nauwkeurig bepalen zowel binnen als buiten.
+    \item Score 5: Locatie kan bepaald worden tot op een centimeter nauwkeurig, zowel binnen als buiten.
+\end{itemize}
+
+\subsection{Download \& Upload limiet van netwerk meten}
+
+\begin{itemize}
+    \item Score 1: Men kan beide snelheden niet achterhalen met de aangeboden tools in de applicatie.
+    \item Score 2: Men kan maximaal 1 van beide snelheden meten.
+    \item Score 3: Men kan beide waarden opmeten maar er zit een duidelijke vertraging op fluctuaties in het netwerk die worden opgemerkt, de ondergrens hiervoor is 30 seconden.
+    \item Score 4: Veranderingen binnen het netwerk worden opgemerkt maar er zit een duidelijke vertraging tussen de verandering en het loggen hiervan, met als ondergrens 2 en bovengrens 30 seconden.
+    \item Score 5: Fluctuaties in het netwerk worden binnen de seconde opgemerkt.
+\end{itemize}
+
+\subsection{Latentie tussen UE en bepaald IP adres vastleggen}
+
+\begin{itemize}
+    \item Score 1: Deze waarde kan niet bepaald worden.
+    \item Score 2: Er is geen enkele parameter die mogelijks aangepast kan worden en de data die binnenkomt komt niet overeen met de effectief verwachte waarden.
+    \item Score 3: De eindgebruiker heeft geen vrije keuze welk adres het wil testen, alsook de interval tijd kan niet aangepast worden maar de waarden zijn wel accuraat.
+    \item Score 4: De eindgebruiker heeft geen vrije keuze welk adres het wil testen maar de waarden worden wel accuraat vastgelegd en de interval tussen elk verzonden pakket is ook een parameter die kan aangepast worden.
+    \item Score 5: De eindgebruiker heeft vrije keuze welk adres het wil testen, alsook de intervaltijd is aanpasbaar en de waarden worden accuraat vastgelegd.
+\end{itemize}
+
+\subsection{Informatie bijhouden in een database voor verder onderzoek}
+
+\begin{itemize}
+    \item Score 1: Er is geen manier voor opslag van de data voorzien binnen de applicatie.
+    \item Score 2: Er is een lokale database maar deze is extern niet bereikbaar en slaat data onregelmatig op.
+    \item Score 3: De data bestaat in een lokale database en is consistent opgeslagen maar is extern niet beschikbaar.
+    \item Score 4: De data bestaat in een databank, is consistent opgeslagen en is extern beschikbaar maar de lokale data vertoont onregelmatigheden omtrent de synchronisatie in verband met externe data.
+    \item Score 5: De lokale databank bevat alle data, is consistent opgeslagen en is extern beschikbaar alsook de data is exact hetzelfde in vergelijking met de externe data. 
+\end{itemize}
+
+\subsection{Visualisatie van desbetreffende data op een administratief portaal}
+
+\begin{itemize}
+    \item Score 1: Er is geen administratief portaal aanwezig voor de bijhorende applicatie.
+    \item Score 2: Er is een administratief portaal aanwezig maar de eindgebruiker moet data eigenhandig inladen.
+    \item Score 3: Er is een administratief portaal aanwezig en de eindgebruiker hoeft de data niet zelf in te laden maar de opties voor data visualisatie zijn weinig tot niet bestaand.
+    \item Score 4: Een portaal is aanwezig en de gebruiker hoeft niet zelf data in te laden, alsook is er een wijd gamma aan data visualisatie.
+    \item Score 5: Een portaal is aanwezig met automatisch ingeladen data en er is een wijd gamma aan data visualisatie dat de gebruiker zelf kan aanpassen naar zijn/haar wensen.
+\end{itemize}
+
+\subsection{Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt}
+
+\begin{itemize}
+    \item Score 1: Er is geen indicatie richting gebruiker.
+    \item Score 2: Gedurende een test is er een vorm van indicatie maar er is geen extra informatie omtrent duur of verloop van de test alsook geen melding indien iets misloopt.
+    \item Score 3: Er is een vorm van indicatie zonder extra informatie maar wel met een melding indien iets misloopt.
+    \item Score 4: Er is een vorm van indicatie met extra informatie omtrent de duur en met melding indien iets fout gaat.
+    \item Score 5: Er is duidelijke indicatie met genoeg informatie richting eindgebruiker om eigen conclusies te nemen, alsook meldingen indien bepaalde processen fout lopen.
+\end{itemize}
+
+\subsection{Detecteren van extra informatie omtrent het netwerk zoals bijvoorbeeld RSSI, RSSQ, id van de cel waarmee de UE verbonden is etc.}
+
+\begin{itemize}
+    \item Score 1: De applicatie bevat niet de capaciteit om extra informatie op te vragen.
+    \item Score 2: De applicatie kan enkel de statische waarden van de cel waarmee het verbonden is opvragen bv. het identificatienummer of de bandbreedte.
+    \item Score 3: De applicatie kan de statische waarden van de cel ophalen alsook de RSSI waarde gelinkt aan de interacties tussen de UE en de zendmast.
+    \item Score 4: De applicatie kan statische waarden alsook de RSSI, RSSQ en NSR waarde ophalen, maar deze waarden worden niet consistent geüpdatet.
+    \item Score 5: De applicatie kan statische waarden alsook de RSSI, RSSQ en NSR warde ophalen en deze waarden worden consistent geüpdatet.
+\end{itemize}
+
+\subsection{Opbreken van informatie voor welk project het nodig is.}
+\begin{itemize}
+    \item Score 1: Er is geen mogelijkheid om een project parameter toe te voegen aan de data.
+    \item Score 2: Er is een project parameter die toegevoegd is aan de data maar deze is hardcoded en kan niet aangepast worden door de gebruiker.
+    \item Score 3: Er is een project parameter die toegevoegd is aan het data object die de gebruiker zelf kan kiezen, maar kan deze eenmalig instellen. 
+    \item Score 4: Er is een project parameter die toegevoegd is aan het data object die de gebruiker zelf meerdere malen kan kiezen en aanpassen.
+    \item Score 5: Er is een lijst beschikbaar met mogelijke project namen zodat de keuze van een gebruiker consistent blijft met de verwachte data die binnenkomt, dit word bijgehouden als een object dat meermaals kan aangepast worden.
+\end{itemize}
+
+\subsection{Versleuteling van data wegens sensitieve aard van gemeten waarde}
+
+\begin{itemize}
+    \item Score 1: Er is geen data die over een netwerk zich verplaatst.
+    \item Score 2: Er is data die zich over een netwerk verplaatst maar deze is niet versleuteld.
+    \item Score 3: De data is zwak geëncrypteerd en kan eenvoudig uitgelezen worden met behulp van beschikbare middelen.
+    \item Score 4: De data is geëncrypteerd volgens een middelmatige standaard en kan deels ontcijferd worden met beschikbare tools.
+    \item Score 5: De data is volgens een hoge standaard geëncrypteerd en kan niet ontcijferd worden met basis tools die ter beschikking zijn.  
+\end{itemize}

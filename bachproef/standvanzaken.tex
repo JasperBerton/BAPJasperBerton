@@ -11,7 +11,17 @@
 
 Dit onderzoek start met een grondige onderdompeling in de wereld van telecommunicatie en technologie om zo een volledige literatuurstudie op te stellen. Verscheidene onderwerpen zullen aan bod komen zoals de geschiedenis van cellulaire netwerken. Dit leid dan tot een duidelijker beeld omtrent de evoluties vanwege het feit dat de technologie en kwaliteit van vandaag daar op is gebouwd. Hierop volgt een diepgaande bespreking omtrent een LTE netwerk omdat dit het type is dat men zal inzetten gedurende de test opstelling. Ten slotte volgt een hoofdstuk omtrent verscheidene termen die vaak voorkomen wanneer men de kwaliteit van een bepaald signaal bespreekt.
 
+\pagebreak
+
 \section{Geschiedenis van het cellulair netwerk}
+
+Gedurende dit hoofdstuk zal de evolutie van de technologie omtrent cellulaire netwerken besproken worden. Op onderstaande afbeelding is een overzicht te zien van de verschillende componenten die besproken zullen worden.
+
+\begin{figure}[!htb]
+    \includegraphics[width=1\linewidth]{graphics/cellular_history_timeline}
+    \caption[Overzicht omtrent de geschiedenis van cellulaire netwerken]{Geschiedenis omtrent de evolutie van cellulaire netwerken \autocite{Keenan2020}}
+    \label{fig:cellularhistory}
+\end{figure}
 
 \subsection{Eerste generatie}
 
@@ -62,8 +72,8 @@ Een andere waarde die kan opgemeten wanneer men verbonden is met een bepaalde ce
 
 Gebruik makende van de vorige twee waarden kan men een andere waarde berekenen die meer inzicht geeft in hoe efficiënt het netwerk data oplevert en of er een betrouwbare connectie is. \autocite{Apostu2024} Deze waarde word ook wel RSRQ oftewel Reference Signal Received Quality genoemd en kan berekend worden met een van de volgende formules:
 
-$ RSRP (Watt) = N * RSRP / RSSQ $ \\
-$ RSRP (dBm) = 10 log (N) + RSRP - RSSI $
+$ RSRP (Watt) = N \times RSRP / RSSQ $ \\
+$ RSRP (dBm) = log_{10} (N) + RSRP - RSSI $
 
 In beide van deze is er een nood voor een waarde N waarmee hier gerefereerd wordt naar het nummer van resource blocks aanwezig in de gemeten bandbreedte van de cel waarmee men verbonden is. \autocite{Kovadloff2021} Deze componenten zijn groeperingen van 12 sub carriers wat uiteindelijk uitkomt op een blok van 180 kHz. \autocite{Mishra2018} Op onderstaande figuur kan men zien hoe het aantal beschikbare blokken zich verhoudt tot de verschillende bandbreedtes die momenteel aanwezig zijn op de markt. 
 

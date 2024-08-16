@@ -1,6 +1,42 @@
 \chapter{Proof of Concept}%
 \label{ch:proofofconcept}
 
+Doorheen dit hoofdstuk volgt een toelichting omtrent het uitbouwen van de POC die zal gevalideerd worden tegenover een commercieel beschikbaar alternatief zoals besproken in het voorgaande hoofdstuk. Voor het uitbouwen van deze applicatie is de keuze genomen om dit in Kotlin met behulp van Android Studio te ondernemen. Dit heeft als nadeel dat het de app beperkt tot 1 specifiek platform maar dit heeft dan als positief gevolg dat er meer informatie kan verzameld worden vanuit het toestel vanwege de aanwezigheid van specifieke functies die toegang hebben tot het toestel. Hierna volgt een diepere kijk omtrent het doel van dit project en de effectieve uitwerking alsook de uitkomst hiervan. 
+
 \section{Doelstelling en requirements}
 
 \section{Uitwerking}
+
+De uitwerking werd gespreid over meerdere weken waarin een applicatie tot stand kwam. Deze iteraties waren periodes van 2 weken met duidelijke doelen voor elke iteratie. Tussen de meerdere iteraties lag een nadruk op terugkoppelen naar de verscheidene doelgroepen om de bruikbaarheid relevant te houden met het ontwikkelingsproces. 
+
+\subsection{Werking van de applicatie}
+
+\subsection{Opstart applicatie}
+
+Wanneer een gebruiker de applicatie voor het eerst opstart komt men op onderstaand scherm terecht. Hier is het de bedoeling dat men aangeeft tot welk team ze behoren en voor welk project dit nodig is. Een database houd deze waarden bij. Dit kan dan meegestuurd worden naar een database om zo een duidelijker onderscheid te maken tussen verscheidene waarden die mogelijks gelijktijdig binnen komen. 
+
+\begin{figure}[!htb]
+    \includegraphics[width=0.3\linewidth]{graphics/startscreen}
+    \caption[Scherm waar eindgebruiker bij uitkomt gedurende eerste opstart]{Scherm waar eindgebruiker bij uitkomt gedurende eerste opstart}
+    \label{fig:startscreen}
+\end{figure}
+
+\subsection{Start scherm}
+
+Na de initiële opstart en het toekennen van permissies komt men bij het scherm hieronder uit. Hier ziet men met welk type netwerk, in dit specifiek geval Wifi of een cellulaire verbinding, men huidig mee verbonden is en welk IP-adres of URL er naar gepingd zal worden gedurende de test fase. Deze informatie en configuratie is van belang vanwege het feit dat dit een zware impact kan hebben op de mogelijk verkregen resultaten.
+
+\begin{figure}[!htb]
+    \includegraphics[width=0.3\linewidth]{graphics/homescreen}
+    \caption[Scherm van waaruit de eindgebruiker na opzet testen kan starten]{Scherm van waaruit de eindgebruiker na opzet testen kan starten}
+    \label{fig:homescreen}
+\end{figure}
+
+\subsection{Continue test omgeving}
+
+Dit scherm volgt direct op het hiervoor besproken deel en integreert de functionaliteit om een netwerk te onderwerpen aan een ping test. Dit heeft geen eindtijd en gebeurt standaard met een interval van 1 seconde, en neemt een zelfgekozen route naar het opgegeven IP adres. Deze parameters staan beide open voor aanpassingen zonder dat het de test onderbreekt. Ook heeft de eindgebruiker een keuze omtrent het starten van een specifieke testroutine of om de data die verzameld is door te sturen naar een externe database. 
+
+\begin{figure}[!htb]
+    \includegraphics[width=0.3\linewidth]{graphics/continuousping}
+    \caption[Scherm dat de eindgebruiker te zien krijgt gedurende een ping test zonder eindtijd]{Scherm dat de eindgebruiker te zien krijgt gedurende een ping test zonder eindtijd}
+    \label{fig:continuousping}
+\end{figure}

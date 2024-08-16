@@ -36,7 +36,7 @@ Ten slotte worden de oude en nieuwe tool tegenover elkaar gezet in een labo omge
 
 \section{Requirementsanalyse}
 
-Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk om vast te leggen wat er van een bepaalde applicatie met dit doel verwacht word. Om deze functionaliteiten een bepaalde prioriteit toe te kennen zal gebruik gemaakt worden van de MoScoW-methode. Hierbij zal elke nood onderverdeeld een plaats krijgen in een bepaalde categorie. Eest en vooral is er de 'Must have', dit bestaat uit de functionaliteiten die een tool moet hebben of deze kan niet gerekend worden als een mogelijke oplossing voor het probleem. Een trap lager is er dan de 'Should have', dit representeert het deel dat belangrijk is, maar niet essentieel. Ten derde is er dan de 'Could have' categorie, dit is dan de groep van functionaliteiten met een lage prioriteit maar waarvan het bestaan wel goed is voor het product. Ten slotte is er ook nog de 'Won't have' functionaliteiten. Hieronder verstaat men de prioriteiten waaraan geen aandacht moet besteed worden vanwege het feit dat dit een lage prioriteit heeft of het niet nodig is in de huidige iteratie richting een product. \autocite{Khan2015}
+Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk om vast te leggen wat er van een bepaalde applicatie met dit doel verwacht word. Om deze functionaliteiten een bepaalde prioriteit toe te kennen zal gebruik gemaakt worden van de MoScoW-methode. Hierbij zal elke nood onderverdeeld een plaats krijgen in een bepaalde categorie. Eest en vooral is er de 'Must have', dit bestaat uit de functionaliteiten die een tool moet hebben of deze kan niet gerekend worden als een mogelijke oplossing voor het probleem. Een trap lager is er dan de 'Should have', dit representeert het deel dat belangrijk is, maar niet essentieel. Ten derde is er dan de 'Could have' categorie, dit is dan de groep van functionaliteiten met een lage prioriteit maar waarvan het bestaan wel goed is voor het product. Ten slotte is er ook nog de 'Won't have' functionaliteiten. Hieronder verstaat men de prioriteiten waaraan geen aandacht moet besteed worden vanwege het feit dat dit een lage prioriteit heeft of het niet nodig is in de huidige iteratie richting een product. \autocite{Khan2015} De informatie die deze lijst bevat werd vastgelegd aan de hand van gesprekken met verscheidene doelgroepen waaronder het Flex en Research team binnen Citymesh.
 
 \begin{itemize}
     \item \textbf{Must have}
@@ -52,7 +52,6 @@ Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk o
     \begin{itemize}
         \item detecteren van extra informatie omtrent netwerk zoals bijvoorbeeld RSSI, RSSQ, id van de cell waarmee UE verbonden is etc.
         \item Opbreken van informatie gebaseerd voor welk project het nodig is.
-        \item Versleuteling van data wegens sensitieve aard van gemeten waarden.
         \item Robuuste navigatie tussen verscheidene componenten
     \end{itemize}
     \item \textbf{Could have}
@@ -70,7 +69,7 @@ Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk o
 
 \section{Beoordelingsschaal}
 
-Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voorwaarden die hierboven gesteld staan, ontwikkeld er zich de nood voor een bepaalde schaal om deze een score toe te kunnen kennen. Om deze problematiek op te lossen zal gebruik gemaakt worden van een puntenschaal gaande van 1 tot 5. In het vervolg van dit hoofdstuk volgt een toelichting voor wat elke score betekend voor een specifieke requirement.
+Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voorwaarden die hierboven gesteld staan, ontwikkeld er zich de nood voor een bepaalde schaal om deze een score toe te kunnen kennen. Om deze problematiek op te lossen zal gebruik gemaakt worden van een puntenschaal gaande van 1 tot 5. In het vervolg van dit hoofdstuk volgt een toelichting voor wat elke score betekend voor een specifieke requirement. Sommige van voorgaande items zullen niet herhaald worden in deze categorie vanwege het feit dat sommige categorieën nominaal zijn in plaats van ordinaal.
 
 \subsection{Locatie bepalen van een eindgebruiker}
 
@@ -130,16 +129,6 @@ Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voor
     \item Score 3: Er is een vorm van indicatie zonder extra informatie maar wel met een melding indien iets misloopt.
     \item Score 4: Er is een vorm van indicatie met extra informatie omtrent de duur en met melding indien iets fout gaat.
     \item Score 5: Er is duidelijke indicatie met genoeg informatie richting eindgebruiker om eigen conclusies te nemen, alsook meldingen indien bepaalde processen fout lopen.
-\end{itemize}
-
-\subsection{Detecteren van extra informatie omtrent het netwerk zoals bijvoorbeeld RSSI, RSSQ, id van de cel waarmee de UE verbonden is etc.}
-
-\begin{itemize}
-    \item Score 1: De applicatie bevat niet de capaciteit om extra informatie op te vragen.
-    \item Score 2: De applicatie kan enkel de statische waarden van de cel waarmee het verbonden is opvragen bv. het identificatienummer of de bandbreedte.
-    \item Score 3: De applicatie kan de statische waarden van de cel ophalen alsook de RSSI waarde gelinkt aan de interacties tussen de UE en de zendmast.
-    \item Score 4: De applicatie kan statische waarden alsook de RSSI, RSSQ en NSR waarde ophalen, maar deze waarden worden niet consistent geüpdatet.
-    \item Score 5: De applicatie kan statische waarden alsook de RSSI, RSSQ en NSR warde ophalen en deze waarden worden consistent geüpdatet.
 \end{itemize}
 
 \subsection{Opbreken van informatie voor welk project het nodig is.}

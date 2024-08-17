@@ -38,17 +38,15 @@ Na de initiële opstart en het toekennen van permissies komt men bij het scherm 
 Dit scherm volgt direct op het hiervoor besproken deel en integreert de functionaliteit om een netwerk te onderwerpen aan een ping test. Dit heeft geen eindtijd en gebeurt standaard met een interval van 1 seconde, en neemt een zelfgekozen route naar het opgegeven IP adres. Deze parameters staan beide open voor aanpassingen zonder dat het de test onderbreekt. Ook heeft de eindgebruiker een keuze omtrent het starten van een specifieke testroutine of om de data die verzameld is door te sturen naar een externe database. 
 
 \begin{figure}[!htb]
-    \includegraphics[width=0.3\linewidth]{graphics/continuousping}
-    \caption[Scherm dat de eindgebruiker te zien krijgt gedurende een ping test zonder eindtijd]{Scherm dat de eindgebruiker te zien krijgt gedurende een ping test zonder eindtijd}
-    \label{fig:continuousping}
+    \includegraphics[width=1\linewidth]{graphics/continuousspecificmerge}
+    \caption[Links het scherm van een eindeloze ping test en rechts een specifieke test die uitgevoerd wordt.]{Links het scherm van een eindeloze ping test en rechts een specifieke test die uitgevoerd wordt.}
+    \label{fig:continuousandspecific}
 \end{figure}
 
-\subsection{Vervulleen specifieke test}
+\subsection{Vervullen specifieke test}
 
 Er is een mogelijkheid tot het uitvoeren van specifieke testen, deze opgenomen in de proof-of-concept zijn een reeks van aangepaste ping testen en een test om de download en upload snelheid te kunnen registreren. Deze waarden bevatten automatisch de locatie van de eindgebruiker en worden standaard verstuurd naar een externe locatie voor analyse. Deze diepgaandere testen bevatten ook verscheidene andere mogelijkheden om deze data weer te geven zoals een tabel of kaart in plaats van de generieke grafieken.
 
-\begin{figure}[!htb]
-    \includegraphics[width=0.3\linewidth]{graphics/specifictest}
-    \caption[Specifiek testscherm gedurende een gekozen routine]{Specifiek testscherm gedurende een gekozen routine}
-    \label{fig:specifictest}
-\end{figure}
+\section{Test opstelling}
+
+G-NetTrack Pro en de POC werden beiden ingezet om een netwerk opgezet door Citymesh te onderwerpen aan testen. Dit in kwestie was dat aanwezig op Graspop Metal Meeting 2024 waar er connectiviteit was voorzien om er voor te zorgen dat alle contactloze betaalpunten operationeel bleven. Deze opstelling bestond uit meerdere cellen om er zo voor te zorgen dat elk deel van het terrein wel bereikt kon worden. Belangrijkste functionaliteit voor deze bussiness case was dat een apparaat verbonden was dus bleek latentie belangrijk dan up- en download snelheden. 

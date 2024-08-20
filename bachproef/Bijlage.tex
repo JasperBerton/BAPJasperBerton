@@ -26,11 +26,11 @@ Python script dat gebruik maakt van Pandas en Matplotlib om een CSV verkregen va
     (raw_data['_time'] > start_time)]
     
     # Group by _time and testRunId
-    grouped = filtered_data.pivot_table(index=['_time', 'testRunId'],
-    columns='_field',
-    values='_value',
-    aggfunc='first').reset_index()
-    grouped.set_index('_time', inplace=True)
+        grouped = filtered_data.pivot_table(index=['_time', 'testRunId'],
+        columns='_field',
+        values='_value',
+        aggfunc='first').reset_index()
+        grouped.set_index('_time', inplace=True)
     
     # Plot the data
     plt.figure(figsize=(12, 6))

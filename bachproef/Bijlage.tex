@@ -1,0 +1,48 @@
+\chapter{Bijlage}
+
+\section{Scripts}
+
+Hieronder vind men alle scripts die toegepast zijn om de data verkregen uit beide applicaties om te vormen tot grafieken en dergelijke.
+
+\subsection{Influx data plotten naar grafiek}
+
+Python script dat gebruik maakt van Pandas en Matplotlib om een CSV verkregen van Influx te plotten naar grafieken. 
+
+\begin{verbatim}
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    
+    # Load the CSV data
+    raw_data = pd.read_csv('files/altered_detail_GM_data.csv')
+    
+    start_time = pd.to_datetime('2024-06-20T13:00:00Z')
+    
+    end_time = pd.to_datetime('2024-06-21T01:00:00Z')
+    
+    # Redefine timestamp to usable time format
+        raw_data['_time'] = pd.to_datetime(raw_data['_time'], format='ISO8601')
+    # Filter the data to only include the time range we are interested in
+    filtered_data = raw_data[(raw_data['_time'] < end_time) & 
+    (raw_data['_time'] > start_time)]
+    
+    # Group by _time and testRunId
+    grouped = filtered_data.pivot_table(index=['_time', 'testRunId'],
+    columns='_field',
+    values='_value',
+    aggfunc='first').reset_index()
+    grouped.set_index('_time', inplace=True)
+    
+    # Plot the data
+    plt.figure(figsize=(12, 6))
+    
+    for column in grouped.columns:
+    if column in ['value']:
+    plt.plot(grouped.index, grouped[column], label=column)
+    
+    plt.xlabel("Tijd")
+    plt.ylabel("Latentie (ms)")
+    plt.title("Latentie Graspop '24 - POC")
+    plt.grid(True)
+    
+    plt.show()
+\end{verbatim}

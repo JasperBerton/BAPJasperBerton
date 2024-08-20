@@ -37,7 +37,7 @@ Na de initiële opstart en het toekennen van permissies komt men bij het scherm 
 
 Dit scherm volgt direct op het hiervoor besproken deel en integreert de functionaliteit om een netwerk te onderwerpen aan een ping test. Dit heeft geen eindtijd en gebeurt standaard met een interval van 1 seconde, en neemt een zelfgekozen route naar het opgegeven IP adres. Deze parameters staan beide open voor aanpassingen zonder dat het de test onderbreekt. Ook heeft de eindgebruiker een keuze omtrent het starten van een specifieke testroutine of om de data die verzameld is door te sturen naar een externe database. 
 
-\begin{figure}[!htb]
+\begin{figure}
     \includegraphics[width=1\linewidth]{graphics/continuousspecificmerge}
     \caption[Links het scherm van een eindeloze ping test en rechts een specifieke test die uitgevoerd wordt.]{Links het scherm van een eindeloze ping test en rechts een specifieke test die uitgevoerd wordt.}
     \label{fig:continuousandspecific}
@@ -55,16 +55,46 @@ G-NetTrack Pro en de POC werden beiden ingezet om een netwerk opgezet door Citym
 
 \subsubsection{G-NetTrack Pro}
 
+Indien men de grafiek te vinden op \ref{fig:CellId_GNET} vergelijkt met de gevonden RSSI waarden van \ref{fig:RSSI_GNET} is duidelijk te zien dat wanneer de RSSI zakt in waarde er een overgang wordt gemaakt van de ene cel naar de andere om betere kwaliteit te garanderen. \\
+
+Wanneer deze overgangen dan ook effectief gebeuren kan er ook een sterke dip te merken zijn tussen de twee pieken vanwege het feit dat de UE meer bezig is met het feit om een verbinding op te stellen met de nieuwe cel om zo een betere verbinding te garanderen voor als de gebruiker zich nog verder van de initieel verbonden cel begeeft. \\
+
+Merk wel op dat er voor deze applicatie geen gegevens bijgehouden worden omtrent latentie, deze waarde is namelijk geen deel van de beschikbare parameters opgevangen door de test routines binnen de applicatie en acht men andere waarden zoals RSSI belangrijker. Ook bleek het niet mogelijk om het adres dat men gebruikt voor data snelheden te testen niet aanpasbaar. 
+
 \begin{figure}[!htb]
     \includegraphics[width=1.2\linewidth]{graphics/RSSI_graph_GNET}
     \caption[Gemeten RSSI waarden op 20 juni 2024 met behulp van G-NetTrack Pro]{Gemeten RSSI waarden op 20 juni 2024 met behulp van G-NetTrack Pro}
     \label{fig:RSSI_GNET}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
     \includegraphics[width=1.2\linewidth]{graphics/CellId_graph_GNET}
-    \caption[Geregistreerde cel identiteit met behulp van G-NetTrack Pro]{Geregistreerde cel identiteit met behulp van G-NetTrack Pro}
+    \caption[Geregistreerde cel identiteit op 20 juni 2024 met behulp van G-NetTrack Pro]{Geregistreerde cel identiteit op 20 juni 2024 met behulp van G-NetTrack Pro}
     \label{fig:CellId_GNET}
 \end{figure}
 
-\subsubsection
+\subsubsection{Proof Of Concept: Pharos}
+
+Deze grafieken bevatten data ontvangen vanuit de POC. Bepaalde elementen zullen hieronder besproken worden zodat er verduidelijking kan zijn bij de verzamelde data. \\
+
+Zo kan men opmerken dat er op \ref{fig:RSSI_POC} een bepaalde periode 0 als waarde gelogd word. Dit zou normaal gezien betekenen dat de verbinding perfect is maar in dit scenario is dat niet het geval. Uit de applicatie code blijkt namelijk dat wanneer er geen mogelijkheid is, er een 0 retourneert. Dit zorgt dus voor een foutief resultaat tussen de ander opgevangen waarden. \\
+
+Op \ref{fig:Lat_POC} valt ook te zien dat er naar het einde van de test routine er zich meerder pieken voordoen waarin het langer dan normaal duurt om reactie te krijgen van een IP-adres. Dit reflecteert zich dan ook duidelijk in de waarden opgevangen afgebeeld in \ref{fig:RSSI_POC}. Wanneer de pieken zich namelijk voordoen is er een duidelijke verlaging in de RSSI-waarde die zich voordoet. Dit betekend dat men zich ergens op de rand van een cel bevind of slecht bereik heeft, wat uiteraard zou leiden tot langere laadtijden en/of meer inconsistentie omtrent een verbinding.
+
+\begin{figure}
+    \includegraphics[width=1.2\linewidth]{graphics/RSSI_graph_40min_POC}
+    \caption[Gemeten RSSI waarden op 20 juni 2024 met behulp van de POC.]{Gemeten RSSI waarden op 20 juni 2024 met behulp van de POC.}
+    \label{fig:RSSI_POC}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=1.2\linewidth]{graphics/latency_graph_40min_POC}
+    \caption[Gemeten latentie waarden op 20 juni 2024 met behulp van de POC.]{Gemeten latentie waarden op 20 juni 2024 met behulp van de POC.}
+    \label{fig:Lat_POC}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=1.2\linewidth]{graphics/CellId_graph_40min_POC}
+    \caption[Opgemerkte cellen gedurende test fase van 20 juni 2024 met behulp van de POC.]{Opgemerkte cellen gedurende test fase van 20 juni 2024 met behulp van de POC.}
+    \label{fig:CI_POC}
+\end{figure}

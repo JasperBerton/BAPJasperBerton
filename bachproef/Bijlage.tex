@@ -46,3 +46,13 @@ Python script dat gebruik maakt van Pandas en Matplotlib om een CSV verkregen va
     
     plt.show()
 \end{verbatim}
+
+\subsection{Conversie bestanden G-NetTrack Pro}
+
+De opgeslagen bestanden van de G-NetTrack Pro applicatie waren niet compatibel voor data analyse vanwege hun formaat dus deze moesten omgezet worden.
+
+\begin{verbatim}
+    with open('files/possible_match_17_06.txt') as fin, open('files/17_06_Flex.csv', 'w') as fout:
+    for line in fin:
+    fout.write(line.replace('\t', ','))
+\end{verbatim}

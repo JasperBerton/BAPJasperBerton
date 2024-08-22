@@ -9,7 +9,7 @@ Het doel van de POC is een uitwerking van de applicatie die kan gebruikt worden 
 
 \section{Uitwerking}
 
-De uitwerking werd gespreid over meerdere weken waarin een applicatie tot stand kwam. Deze iteraties waren periodes van 2 weken met duidelijke doelen voor elke iteratie. Tussen de meerdere iteraties lag een nadruk op terugkoppelen naar de verscheidene doelgroepen om de bruikbaarheid relevant te houden met het ontwikkelingsproces. 
+De uitwerking werd gespreid over meerdere weken waarin een applicatie tot stand kwam. Deze iteraties waren periodes van 2 weken met duidelijke doelen voor elke iteratie. Tussen de meerdere iteraties lag een nadruk op terugkoppelen naar de verscheidene doelgroepen om de bruikbaarheid relevant te houden met het ontwikkelingsproces. Een verschil met de andere applicatie waartegenover deze zal getest worden is de manier van databehandeling. Zo slaat de G-NetTrack Pro applicatie deze lokaal op terwijl de POC deze doorstuurt naar een Influx database en dat deze dan weer is gelinkt aan een Grafana dashboard waar de informatie aanwezig in de database op een gebruiksvriendelijke manier uitgestald staat. 
 
 \subsection{Werking van de applicatie}
 
@@ -53,9 +53,11 @@ G-NetTrack Pro en de POC werden beiden ingezet om een netwerk opgezet door Citym
 
 \subsection{Test resultaten}
 
+Eerst en vooral kunnen beide applicaties vergeleken worden op basis van de op voorhand gestelde requirements. Wanneer \ref{fig:TableGNET} en \ref{fig:POCTabel} in vergelijking gesteld worden kan geconcludeerd worden dat de proof-of-concept het dichtst aansluit bij waar er effectief nood voor was. Wel kan er opgemerkt worden dat de proof-of-concept minder scoort op bepaalde vlakken, dit valt te danken aan de wisselende stabiliteit van de applicatie door de experimentele aard van het project.
+
 \subsubsection{G-NetTrack Pro}
 
-Indien men de grafiek te vinden op \ref{fig:CellId_GNET} vergelijkt met de gevonden RSSI waarden van \ref{fig:RSSI_GNET} is duidelijk te zien dat wanneer de RSSI zakt in waarde er een overgang wordt gemaakt van de ene cel naar de andere om betere kwaliteit te garanderen. \\
+Indien men de grafiek te vinden op \ref{fig:CellId_GNET} vergelijkt met de gevonden RSSI waarden van \ref{fig:RSSI_GNET} is duidelijk te zien dat wanneer de RSSI waarde daalt er een overgang in de maak is van de ene cel naar de andere om betere kwaliteit te garanderen. \\
 
 Wanneer deze overgangen dan ook effectief gebeuren kan er ook een sterke dip te merken zijn tussen de twee pieken vanwege het feit dat de UE meer bezig is met het feit om een verbinding op te stellen met de nieuwe cel om zo een betere verbinding te garanderen voor als de gebruiker zich nog verder van de initieel verbonden cel begeeft. \\
 
@@ -81,77 +83,84 @@ Zo kan men opmerken dat er op \ref{fig:RSSI_POC} een bepaalde periode 0 als waar
 
 Op \ref{fig:Lat_POC} valt ook te zien dat er naar het einde van de test routine er zich meerder pieken voordoen waarin het langer dan normaal duurt om reactie te krijgen van een IP-adres. Dit reflecteert zich dan ook duidelijk in de waarden opgevangen afgebeeld in \ref{fig:RSSI_POC}. Wanneer de pieken zich namelijk voordoen is er een duidelijke verlaging in de RSSI-waarde die zich voordoet. Dit betekend dat men zich ergens op de rand van een cel bevind of slecht bereik heeft, wat uiteraard zou leiden tot langere laadtijden en/of meer inconsistentie omtrent een verbinding.
 
-\begin{figure}
+\subsection{Persoonlijke reflectie}
+
+Gedurende de uitvoering van verscheidene testprocedures werd duidelijk dat het manueel gedeelte van effectief rondlopen en het netwerk grondig testen weinig tot niet ingekort kan worden bij beide applicaties. Ook bleek dat de applicatie opgesteld als de proof-of-concept nog wat bugs ondervond. Wel bleek het mogelijk om gedurende het festival een probleem op te merken die onopgemerkt bleek voor de andere applicatie. Het bleek namelijk dat een bepaald onderdeel tussen het opgezette netwerk en het internet daarbuiten niet gelinkt waren. Doordat de POC kan aanpassen welk IP adres het gebruikt in de testen kon zo de gehele route afgegaan worden om te constateren waar het probleem zich bevind.    
+
+\pagebreak
+
+\begin{figure}[!htb]
     \includegraphics[width=1.2\linewidth]{graphics/RSSI_graph_40min_POC}
     \caption[Gemeten RSSI waarden op 20 juni 2024 met behulp van de POC.]{Gemeten RSSI waarden op 20 juni 2024 met behulp van de POC.}
     \label{fig:RSSI_POC}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
     \includegraphics[width=1.2\linewidth]{graphics/latency_graph_40min_POC}
     \caption[Gemeten latentie waarden op 20 juni 2024 met behulp van de POC.]{Gemeten latentie waarden op 20 juni 2024 met behulp van de POC.}
     \label{fig:Lat_POC}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
     \includegraphics[width=1.2\linewidth]{graphics/CellId_graph_40min_POC}
     \caption[Opgemerkte cellen gedurende test fase van 20 juni 2024 met behulp van de POC.]{Opgemerkte cellen gedurende test fase van 20 juni 2024 met behulp van de POC.}
     \label{fig:CI_POC}
 \end{figure}
 
-\begin{table}
+\begin{table}[!htb]
     \begin{tabular}{| c | c |}
         \hline
-        Locatie bepalen van een eindgebruiker & 0 \\
+        Locatie bepalen van een eindgebruiker & 5 \\
         \hline
-        Download \& Upload limiet van een netwerk meten & 0 \\
+        Download \& Upload limiet van een netwerk meten & 5 \\
         \hline
-        Latentie tussen UE en bepaald IP-adres vastleggen & 0 \\
+        Latentie tussen UE en bepaald IP-adres vastleggen & 1 \\
         \hline
-        Informatie bijhouden in een database voor verder onderzoek & 0 \\
+        Informatie bijhouden in een database voor verder onderzoek & 3 \\
         \hline
-        Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt & 0 \\
+        Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt & 3 \\
         \hline
         Kan RSSI opsporen & Ja \\
         \hline
         Kan Id van een cel ophalen & Ja \\
         \hline
-        Opbreken van informatie gebaseerd voor welk project het nodig is & 0 \\
+        Opbreken van informatie gebaseerd voor welk project het nodig is & 1 \\
         \hline
-        Testen uitvoeren op de achtergrond van een UE & 0 \\
+        Testen uitvoeren op de achtergrond van een UE & Ja \\
         \hline
-        Van op afstand een test activeren & 0 \\
+        Van op afstand een test activeren & Nee \\
         \hline
-        Aanduiden van belangrijke locaties op een kaart component & Ja \\
+        Aanduiden van belangrijke locaties op een kaart component & Nee \\
         \hline
         Genereren van rapporten gebaseerd op gemeten data & Nee \\
         \hline
     \end{tabular}
 \caption{Tabel omvattende de requirement scores van G-NetTrack Pro}
+\label{fig:TableGNET}
 \end{table}
 
-\begin{table}
+\begin{table}[!htb]
     \begin{tabular}{| c | c |}
         \hline
-        Locatie bepalen van een eindgebruiker & 0 \\
+        Locatie bepalen van een eindgebruiker & 3 \\
         \hline
-        Download \& Upload limiet van een netwerk meten & 0 \\
+        Download \& Upload limiet van een netwerk meten & 4 \\
         \hline
-        Latentie tussen UE en bepaald IP-adres vastleggen & 0 \\
+        Latentie tussen UE en bepaald IP-adres vastleggen & 5 \\
         \hline
-        Informatie bijhouden in een database voor verder onderzoek & 0 \\
+        Informatie bijhouden in een database voor verder onderzoek & 5 \\
         \hline
-        Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt & 0 \\
+        Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt & 5 \\
         \hline
         Kan RSSI opsporen & Ja \\
         \hline
         Kan Id van een cel ophalen & Ja \\
         \hline
-        Opbreken van informatie gebaseerd voor welk project het nodig is & 0 \\
+        Opbreken van informatie gebaseerd voor welk project het nodig is & 5 \\
         \hline
-        Testen uitvoeren op de achtergrond van een UE & 0 \\
+        Testen uitvoeren op de achtergrond van een UE & Nee \\
         \hline
-        Van op afstand een test activeren & 0 \\
+        Van op afstand een test activeren & Nee \\
         \hline
         Aanduiden van belangrijke locaties op een kaart component & Ja \\
         \hline
@@ -159,8 +168,5 @@ Op \ref{fig:Lat_POC} valt ook te zien dat er naar het einde van de test routine 
         \hline
     \end{tabular}
     \caption{Tabel omvattende de requirement scores van de POC}
-\end{table}
-
-\subsubsection{POC}
-
-\subsection{Persoonlijke reflectie}
+    \label{fig:POCTabel}
+\end{table}  

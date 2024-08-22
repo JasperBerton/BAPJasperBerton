@@ -30,9 +30,9 @@ Gedurende de eerste fase van het onderzoek zal een literatuurstudie opgesteld wo
 
 De tweede fase bestaat er uit om een requirement analyse uit te voeren zodat er een beeld kan gevormd worden waaraan applicatie dient te voldoen om effectief ingezet te kunnen worden in het werkveld om zo functioneel netwerken te testen. De voorwaarden die bij deze stap neergezet worden kan men dan nadien ook inzetten om de nieuwe applicatie te vergelijken met andere applicaties die al op de markt zijn, of in gebruik zijn binnen Citymesh. Dit onderdeel zal hieronder in een apart hoofdstuk besproken worden. \\
 
-Doorheen de derde fase zal er dan een Proof-of-Concept opgesteld worden gebaseerd op de eerder gestelde voorwaarden. Dit zal gebeuren in meerdere iteraties en met terugkoppeling naar de poule van eindgebruikers voor de te ontwikkelen tool. \\
+Doorheen de derde fase zal er dan een proof of concept opgesteld worden gebaseerd op de eerder gestelde voorwaarden. Dit zal gebeuren in meerdere iteraties en met terugkoppeling naar de poule van eindgebruikers voor de te ontwikkelen tool. \\
 
-Ten slotte worden de oude en nieuwe tool tegenover elkaar gezet in een labo omgeving waarin testen zullen uitgevoerd worden om zo te zien of er significante voordelen zijn geboekt bij het opbouwen van de nieuwe applicatie ten opzichte van de reeds bestaande technologie. Hierover zal dan een conclusie gevormd worden met advies richting Citymesh zodat men gebruik makende van de beste tool verder hun netwerken kan testen.
+Ten slotte worden de oude en nieuwe tool tegenover elkaar gezet in een effectieve omgeving waarin testen zullen uitgevoerd worden om zo te zien of er significante voordelen zijn geboekt bij het opbouwen van de nieuwe applicatie ten opzichte van de reeds bestaande technologie. Hierover zal dan een conclusie gevormd worden met advies richting Citymesh zodat men gebruik makende van de beste tool verder hun netwerken kan testen.
 
 \section{Requirementsanalyse}
 
@@ -45,14 +45,12 @@ Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk o
         \item Download \& Upload limiet van netwerk meten.
         \item Latentie tussen UE en bepaald IP adres vastleggen.
         \item Informatie bijhouden in een database voor verder onderzoek.
-        \item Visualisatie van desbetreffende data op een administratief portaal.
         \item Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt.
     \end{itemize}
     \item \textbf{Should have}
     \begin{itemize}
         \item detecteren van extra informatie omtrent netwerk zoals bijvoorbeeld RSSI, RSSQ, id van de cell waarmee UE verbonden is etc.
         \item Opbreken van informatie gebaseerd voor welk project het nodig is.
-        \item Robuuste navigatie tussen verscheidene componenten
     \end{itemize}
     \item \textbf{Could have}
     \begin{itemize}
@@ -69,7 +67,7 @@ Om een grondig antwoord te formuleren op de gestelde vraag is het noodzakelijk o
 
 \section{Beoordelingsschaal}
 
-Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voorwaarden die hierboven gesteld staan, ontwikkeld er zich de nood voor een bepaalde schaal om deze een score toe te kunnen kennen. Om deze problematiek op te lossen zal gebruik gemaakt worden van een puntenschaal gaande van 1 tot 5. In het vervolg van dit hoofdstuk volgt een toelichting voor wat elke score betekend voor een specifieke requirement. Sommige van voorgaande items zullen niet herhaald worden in deze categorie vanwege het feit dat sommige categorieën nominaal zijn in plaats van ordinaal.
+Wanneer de commerciële applicatie en de proof of concept zich meten aan de voorwaarden die hierboven gesteld staan, ontwikkeld er zich de nood voor een bepaalde schaal om deze een score toe te kunnen kennen. Om deze problematiek op te lossen zal gebruik gemaakt worden van een puntenschaal gaande van 1 tot 5. In het vervolg van dit hoofdstuk volgt een toelichting voor wat elke score betekend voor een specifieke requirement. Sommige van voorgaande items zullen niet herhaald worden in deze categorie vanwege het feit dat sommige categorieën nominaal zijn in plaats van ordinaal.
 
 \subsection{Locatie bepalen van een eindgebruiker}
 
@@ -111,16 +109,6 @@ Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voor
     \item Score 5: De lokale databank bevat alle data, is consistent opgeslagen en is extern beschikbaar alsook de data is exact hetzelfde in vergelijking met de externe data. 
 \end{itemize}
 
-\subsection{Visualisatie van desbetreffende data op een administratief portaal}
-
-\begin{itemize}
-    \item Score 1: Er is geen administratief portaal aanwezig voor de bijhorende applicatie.
-    \item Score 2: Er is een administratief portaal aanwezig maar de eindgebruiker moet data eigenhandig inladen.
-    \item Score 3: Er is een administratief portaal aanwezig en de eindgebruiker hoeft de data niet zelf in te laden maar de opties voor data visualisatie zijn weinig tot niet bestaand.
-    \item Score 4: Een portaal is aanwezig en de gebruiker hoeft niet zelf data in te laden, alsook is er een wijd gamma aan data visualisatie.
-    \item Score 5: Een portaal is aanwezig met automatisch ingeladen data en er is een wijd gamma aan data visualisatie dat de gebruiker zelf kan aanpassen naar zijn/haar wensen.
-\end{itemize}
-
 \subsection{Indicatie naar eindgebruiker wat er gebeurt gedurende een bepaalde test die loopt}
 
 \begin{itemize}
@@ -138,14 +126,4 @@ Wanneer de commerciële applicatie en de proof-of-concept zich meten aan de voor
     \item Score 3: Er is een project parameter die toegevoegd is aan het data object die de gebruiker zelf kan kiezen, maar kan deze eenmalig instellen. 
     \item Score 4: Er is een project parameter die toegevoegd is aan het data object die de gebruiker zelf meerdere malen kan kiezen en aanpassen.
     \item Score 5: Er is een lijst beschikbaar met mogelijke project namen zodat de keuze van een gebruiker consistent blijft met de verwachte data die binnenkomt, dit word bijgehouden als een object dat meermaals kan aangepast worden.
-\end{itemize}
-
-\subsection{Versleuteling van data wegens sensitieve aard van gemeten waarde}
-
-\begin{itemize}
-    \item Score 1: Er is geen data die over een netwerk zich verplaatst.
-    \item Score 2: Er is data die zich over een netwerk verplaatst maar deze is niet versleuteld.
-    \item Score 3: De data is zwak geëncrypteerd en kan eenvoudig uitgelezen worden met behulp van beschikbare middelen.
-    \item Score 4: De data is geëncrypteerd volgens een middelmatige standaard en kan deels ontcijferd worden met beschikbare tools.
-    \item Score 5: De data is volgens een hoge standaard geëncrypteerd en kan niet ontcijferd worden met basis tools die ter beschikking zijn.  
 \end{itemize}

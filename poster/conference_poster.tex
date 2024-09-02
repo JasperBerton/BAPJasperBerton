@@ -22,58 +22,64 @@
 % Indien ingevuld, wordt deze informatie toegevoegd aan het einde van de
 % abstract. Zet in commentaar als je dit niet wilt.
 \specialisation{Mobile \& Enterprise Development}
-\keywords{Lambda-calculus, Scheme}
-\projectrepo{https://github.com/user/repo}
+\keywords{Private Network, Connectivity, Android}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-It's only a model.
-You don't vote for kings. Who's that then? We found them. Ni! Ni! Ni! Ni!
-The nose? On second thoughts, let's not go there. It is a silly place. Bloody Peasant! And the hat. She's a witch! Where'd you get the coconuts?
+In dit project werd een interne Android-applicatie ontwikkeld met als doel het vereenvoudigen en versnellen van handmatige tests binnen private netwerken. De applicatie automatiseert hierbij de gegevensverzameling en biedt real-time analyse van kritieke opgemeten waarden zoals latentie en signaalsterkte. Tijdens tests gedurende Graspop Metal Meeting 2024 bleek de applicatie effectief in het reduceren van de verwerkingstijd en het identificeren van netwerkproblemen die anders onopgemerkt zouden blijven. Dit onderzoek toont aan dat de toepassing van interne softwareoplossingen een aanzienlijke meerwaarde biedt in het beheren en optimaliseren van private netwerken.
 \end{abstract}
 
 \begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
 \section{Introductie}
 
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+Indien men een privaat netwerk handmatig wenst te testen komt dit vaak neer op een tijdrovende taak omtrent het verzamelen van ongestructureerde data.
+Deze bachelorproef had als doel om een applicatie te ontwikkelen waarbij er een focus is op het automatiseren van dit test proces. Hiernaast was er ook een implementatie voor data visualisatie alvorens het verstuurd werd naar een externe database. 
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say `Ni' again to you, if you do not appease us.
+\section{Probleemstelling}
 
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
+Private netwerken baten bij intensieve monitoring om zo de stabiele werking er van te kunnen garanderen. Er bestaan huidige commerciële alternatieven maar deze schieten vaak te kort voor specifieke use cases.
 
-You can't expect to wield supreme power just `cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+\section{Doelstelling}
 
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+Het doel van dit onderzoek was de ontwikkeling van een proof-of-concept, dit in de vorm van een Android-applicatie met als belangrijkste pijler het vereenvoudigen van de handmatige testen door:
 
-\section{Experimenten}
+\begin{itemize}
+    \item Geautomatiseerde gegevensverzameling: Realtime monitoren van verscheidene parameters binnen een netwerk
+    \item Externe data opslag: Gebruik van een database om gegevens direct te kunnen analyseren.
+    \item Gebruiksvriendelijke interface: Intuïtieve bediening voor snelle configuratie en test uitvoering.
+\end{itemize}
 
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
+\section{Methodologie}
 
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
+De applicatie werd uitgebouwd gedurende meerdere iteraties, waarbij feedback verschillende partijen binnen Citymesh werd geïntegreerd. De applicatie werd getest op Graspop Metal Meeting 2024 om de effectiviteit binnen een real-world scenario te evalueren.
 
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
+%\section{Sectie met figuur}
 
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
-
-\section{Sectie met figuur}
-
-De {\LaTeX} figure-omgeving bepaalt zelf waar een afbeelding komt en dat is meestal niet op de plek in de tekst waar de figure-omgeving gedefinieerd wordt. Als je wilt forceren dat afbeeldingen toch in de flow van de tekst blijven, dan kan je dat zoals hieronder:
+%De {\LaTeX} figure-omgeving bepaalt zelf waar een afbeelding komt en dat is meestal niet op de plek in de tekst waar de figure-omgeving gedefinieerd wordt. Als je wilt forceren dat afbeeldingen toch in de flow van de tekst blijven, dan kan je dat zoals hieronder:
 
 \begin{center}
   \captionsetup{type=figure}
-  \includegraphics[width=1.0\linewidth]{grail}
-  \captionof{figure}{He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say `Ni' again to you, if you do not appease us}
+  \includegraphics[width=0.7\linewidth]{continuousspecificmerge}
+  \captionof{figure}{Twee schermen desbetreffende de dataverzameling binnen de proof-of-concept}
 \end{center}
 
-Let er wel op dat dit tot problemen met bladschikking kan leiden.
+%Let er wel op dat dit tot problemen met bladschikking kan leiden.
+
+\section{Resultaten}
+
+\begin{itemize}
+    \item Efficiëntieverbetering: De applicatie reduceert nodige verwerkingstijd van testdata significant.
+    \item Inzichten: De ontwikkelde oplossing identificeerde netwerkproblemen die onopgemerkt bleven voor commerciële software.
+    \item Gebruikservaring: De toepassing bleek gebruiksvriendelijk en flexibel inzetbaar in verscheidene netwerktests.
+\end{itemize}
 
 \section{Conclusies}
 
-Don't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+De ontwikkelde applicatie toont aan dat handmatige netwerktests aanzienlijk kunnen worden geoptimaliseerd door gebruik te maken van interne softwareoplossingen. Dit project legt de basis voor toekomstige ontwikkelingen waarbij de automatisering van netwerkbeheer verder kan worden uitgebreid.
 
 \section{Toekomstig onderzoek}
 
